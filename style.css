@@ -1,0 +1,21 @@
+/* Adicione isso ao seu arquivo style.css */
+
+.lang-btn {
+    padding: 0.5rem 1rem; /* Um pouco menor que outros botões */
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 1.5rem; /* Espaçamento à esquerda */
+}
+
+/* Ajuste para o menu mobile */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        /* Adicione order para reordenar os itens no mobile */
+        flex-direction: column;
+    }
+    .lang-btn {
+        margin-left: 0;
+        margin-bottom: 1rem; /* Espaçamento abaixo no mobile */
+        order: -1; /* Coloca o botão de idioma no topo do menu mobile */
+    }
+}
