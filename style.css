@@ -79,12 +79,12 @@ h3 { font-size: 1.75rem; }
 
 .btn-primary {
     background-color: var(--primary-color);
-    color: var(--text-light); /* Cor inicial do texto */
+    color: var(--text-light);
 }
 
 .btn-primary:hover {
     background-color: var(--accent-color);
-    color: var(--text-light); /* <-- NOVO: Garante que o texto continue claro no hover */
+    color: var(--text-light);
     transform: translateY(-2px);
 }
 
@@ -100,7 +100,7 @@ h3 { font-size: 1.75rem; }
     transform: translateY(-2px);
 }
 
-/* Botão de Idioma (NOVO) */
+/* Botão de Idioma */
 .lang-btn {
     padding: 0.5rem 1rem;
     text-transform: uppercase;
@@ -116,12 +116,12 @@ h3 { font-size: 1.75rem; }
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Garante que fique atrás de todo o conteúdo */
+    z-index: -1;
 }
 
 /* Header */
 .header {
-    background-color: rgba(26, 26, 46, 0.9); /* Fundo semi-transparente */
+    background-color: rgba(26, 26, 46, 0.9);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -133,7 +133,7 @@ h3 { font-size: 1.75rem; }
 }
 
 .header.scrolled {
-    background-color: var(--bg-dark); /* Fica opaco ao rolar */
+    background-color: var(--bg-dark);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -156,7 +156,7 @@ h3 { font-size: 1.75rem; }
 }
 
 .navbar-toggler {
-    display: none; /* Escondido por padrão, visível no mobile */
+    display: none;
     background: none;
     border: none;
     font-size: 1.8rem;
@@ -205,12 +205,12 @@ h3 { font-size: 1.75rem; }
     text-align: center;
     position: relative;
     padding: 2rem 1rem;
-    background: transparent; /* Apenas para garantir que o tsparticles apareça */
+    background: transparent;
 }
 
 .hero-content {
     max-width: 800px;
-    position: relative; /* Para ficar acima do tsparticles */
+    position: relative;
     z-index: 1;
 }
 
@@ -242,12 +242,11 @@ h3 { font-size: 1.75rem; }
     gap: 1.5rem;
 }
 
-/* Faz os botões do Hero terem o mesmo tamanho */
 .hero-actions .btn {
-    flex: 1; /* Faz os botões crescerem e ocuparem o espaço igualmente */
-    max-width: 220px; /* Limita o tamanho máximo para não ficarem gigantes em telas muito largas */
-    justify-content: center; /* Centraliza o conteúdo dentro dos botões (por serem display: inline-flex) */
-    text-align: center; /* Garante que o texto fique centralizado */
+    flex: 1;
+    max-width: 220px;
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -384,11 +383,11 @@ h3 { font-size: 1.75rem; }
     font-size: 1rem;
     color: rgba(244, 244, 244, 0.85);
     margin-bottom: 1.2rem;
-    flex-grow: 1; /* Para fazer os cards terem altura uniforme */
+    flex-grow: 1;
 }
 
 .project-techs {
-    margin-top: auto; /* Empurra as techs para o final */
+    margin-top: auto;
     margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -396,13 +395,13 @@ h3 { font-size: 1.75rem; }
 }
 
 .tech-tag {
-    background-color: rgba(var(--primary-color-rgb, 0, 123, 255), 0.2); /* Usa a cor primária com transparência */
+    background-color: rgba(var(--primary-color-rgb, 0, 123, 255), 0.2);
     color: var(--primary-color);
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 500;
-    white-space: nowrap; /* Evita quebra de linha dentro da tag */
+    white-space: nowrap;
 }
 
 .project-value {
@@ -463,7 +462,7 @@ h3 { font-size: 1.75rem; }
     top: 20px;
     border-radius: 50%;
     z-index: 1;
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Adicionando transição */
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .timeline-item:nth-child(odd)::after {
@@ -474,11 +473,10 @@ h3 { font-size: 1.75rem; }
     left: -10px;
 }
 
-/* Efeito no balão (círculo) quando o card associado é hover */
 .timeline-item:hover::after {
-    background-color: var(--accent-color); /* Muda a cor do balão */
-    border-color: var(--accent-color); /* Muda a cor da borda do balão */
-    transform: scale(1.2); /* Faz o balão crescer um pouco */
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: scale(1.2);
 }
 
 .timeline-date {
@@ -639,7 +637,7 @@ h3 { font-size: 1.75rem; }
 
 /* Utilitário para mobile menu */
 .navbar-collapse {
-    display: flex; /* Por padrão, visível no desktop */
+    display: flex;
     align-items: center;
     gap: 1.5rem;
 }
@@ -667,16 +665,16 @@ h3 { font-size: 1.75rem; }
 
 @media (max-width: 768px) {
     .navbar-toggler {
-        display: block; /* Hamburger visível no mobile */
+        display: block;
     }
 
     .navbar-collapse {
-        display: none; /* Menu escondido por padrão */
+        display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
         position: absolute;
-        top: 100%; /* Abaixo do header */
+        top: 100%;
         left: 0;
         background-color: var(--bg-dark);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -685,7 +683,7 @@ h3 { font-size: 1.75rem; }
     }
 
     .navbar-collapse.show {
-        display: flex; /* Mostra o menu quando ativo */
+        display: flex;
     }
 
     .navbar-nav {
@@ -710,11 +708,10 @@ h3 { font-size: 1.75rem; }
         text-align: center;
     }
     
-    /* Estilo do botão de idioma no mobile (NOVO) */
     .lang-btn {
         margin-left: 0;
         margin-bottom: 1rem;
-        order: -1; /* Coloca o botão no topo do menu mobile */
+        order: -1;
     }
 
     .hero-title {
@@ -727,12 +724,12 @@ h3 { font-size: 1.75rem; }
         font-size: 1rem;
     }
     .hero-actions {
-        flex-direction: column; /* Botões empilham em mobile */
+        flex-direction: column;
         gap: 1rem;
     }
     
     .hero-actions .btn {
-        max-width: 100%; /* Permite que eles se expandam no mobile */
+        max-width: 100%;
     }
 
 
@@ -755,7 +752,7 @@ h3 { font-size: 1.75rem; }
     }
 
     .timeline::before {
-        left: 18px; /* Move a linha do tempo para a esquerda */
+        left: 18px;
     }
 
     .timeline-item {
@@ -768,11 +765,11 @@ h3 { font-size: 1.75rem; }
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         left: 0;
-        padding-right: 1rem; /* Ajusta o padding */
+        padding-right: 1rem;
     }
 
     .timeline-item::after {
-        left: 10px; /* Move o círculo para a linha do tempo */
+        left: 10px;
     }
 }
 
